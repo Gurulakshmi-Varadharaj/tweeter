@@ -5,6 +5,8 @@ Tweeter is a simple, single-page Twitter clone which is AJAX-based that uses jQu
 ## Final product
 !["Screenshot of tweets app"](https://github.com/Gurulakshmi-Varadharaj/tweeter/blob/master/public/images/tweets.png)
 
+
+
 !["Screenshot of tweets validation"](https://github.com/Gurulakshmi-Varadharaj/tweeter/blob/master/public/images/tweets_validation.png)
 
 ## Dependencies
