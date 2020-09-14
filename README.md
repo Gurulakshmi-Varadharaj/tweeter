@@ -11,5 +11,9 @@ Tweeter is a simple, single-page Twitter clone which is AJAX-based that uses jQu
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
 
 ## Getting Started
+- Install all dependencies (using the `npm install` command).
+- Run the development web server using the 'npm run local'
