@@ -45,8 +45,11 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <!--Container for Error message after validation of textarea-->
+      <div class="errorMsg">
+      </div>
       <h2>Compose Tweet</h2>
-      <form action='POST' method='/tweets/'>
+      <form id='submitTweet' action='POST' method='/tweets/'>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div>
           <button type="submit">Tweet</button>
@@ -54,10 +57,8 @@
         </div>
       </form>
     </section>
-
-    <section>
-      <article class='tweet'>
-      </article>
+    <!--Append new Tweets dynamically using AJAX and JQuery-->
+    <section class="addTweet">
     </section>
   </main>
 </body>

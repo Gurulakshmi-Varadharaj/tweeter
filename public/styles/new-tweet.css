@@ -1,0 +1,81 @@
+/*****
+Styles for createNewTweet
+***/
+.new-tweet h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-tweet form{
+  margin: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.new-tweet form div{
+  margin: 1.5em;
+  font-family: 'Bungee', cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-tweet form div button{
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.errorMsg {
+  border: 2px solid red;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/****To display recently posted Tweet first****/
+.addTweet {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+article.tweet {
+ margin: 1.5em;
+ border: 3px solid black;
+}
+
+article.tweet span{
+  display: none;
+}
+
+/*
+ Handling hover event in CSS
+*/
+article.tweet:hover span{
+  color: cornflowerblue;
+  display: block;
+ }
+
+/****CSS for appending new tweets****/
+article.tweet header{
+  display: flex;
+  align-items: center;
+}
+
+article.tweet img{
+  width: 50px;
+}
+
+article.tweet main{
+  margin: 1em;
+  border-bottom: 2px solid black;
+}
+
+article.tweet footer{
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
