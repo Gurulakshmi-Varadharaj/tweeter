@@ -10,15 +10,15 @@ const createTweetElement = (newTweet) => {
   <header>
     <img
       src='${newTweet['user']['avatars']}'>
-      '${newTweet['user']['name']}'</img>
-      <span>'${newTweet['user']['handle']}'</span>
+      ${newTweet['user']['name']}</img>
+      <span>${newTweet['user']['handle']}</span>
   </header>
   <main>
-    '${newTweet['content']['text']}'
+    ${newTweet['content']['text']}
   </main>
   <footer>
-    <p>'${newTweet['created_at']}'</p>
-    <p>Like</p>
+    <p>10 days ago</p>
+    <p></p>
   </footer>
   </article>
   `
