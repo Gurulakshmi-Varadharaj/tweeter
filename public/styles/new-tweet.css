@@ -52,11 +52,12 @@ article.tweet span{
 }
 
 /*
- Handling hover event in CSS
+ Handling hover event in CSS and to display the handle value at right end
 */
 article.tweet:hover span{
   color: cornflowerblue;
   display: block;
+  margin-left: auto              
  }
 
 /****CSS for appending new tweets****/
