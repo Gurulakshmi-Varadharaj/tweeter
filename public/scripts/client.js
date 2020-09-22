@@ -1,24 +1,24 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
 //Helper function to append newTweets 
 const createTweetElement = (newTweet) => {
   const $tweet = `
   <article class = 'tweet'>
   <header>
-    <img
-      src='${newTweet['user']['avatars']}'>
-      ${newTweet['user']['name']}</img>
-      <span>${newTweet['user']['handle']}</span>
+  <img
+  src='${newTweet['user']['avatars']}'>
+  ${newTweet['user']['name']}</img>
+  <span>${newTweet['user']['handle']}</span>
   </header>
   <main>
-    ${newTweet['content']['text']}
+  ${newTweet['content']['text']}
   </main>
   <footer>
-    <p>10 days ago</p>
-    <p></p>
+  <p>${newTweet['created_at']} days ago</p>
+  <p></p>
   </footer>
   </article>
   `
@@ -27,7 +27,11 @@ const createTweetElement = (newTweet) => {
 
 //Helper function to render Tweets one-by-one
 const renderTweets = (tweets) => {
+  $('.addTweet').empty();
   for (let tweet of tweets) {
+    const difference = Date.now() - tweet.created_at;
+    const daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+    tweet.created_at = daysDifference
     let newTweet = createTweetElement(tweet);
     $('.addTweet').append(newTweet);
   }
@@ -49,9 +53,13 @@ $(document).ready(function () {
     evt.preventDefault();
     //Handling validation errors for user input data
     if ($('#tweet-text').val() === '') {
-      return $('.errorMsg').text('Please fill text to create new tweet');
+      return $('.errorMsg').html('Please fill text to create new tweet').hide().slideDown({
+        duration: 4000
+      });
     } else if ($('.counter').val() <= 0) {
-      return $('.errorMsg').text('Too long. Please respect arbitary limit for 140 chars');
+      return $('.errorMsg').html('Too long. Please respect arbitary limit for 140 chars').hide().slideDown({
+        duration: 4000
+      });
     }
     const userInput = $('#tweet-text').val();
     $('#tweet-text').text(userInput);

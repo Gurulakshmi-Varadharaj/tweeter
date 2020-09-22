@@ -27,6 +27,7 @@ Styles for createNewTweet
   color: #FFFFFF;
 }
 
+/***Error display after validaion of user input in text area***/
 .errorMsg {
   border: 2px solid red;
   color: red;

@@ -1,7 +1,7 @@
-$(document).ready(function() {
-  //Count input characters when tying text in textarea element and display in counter element
+$(document).ready(function () {
+  //Count input characters when typing text in textarea element and display in counter element
   let count = $('.counter').val();
-  $('#tweet-text').on('keydown', function() {
+  $('#tweet-text').on('keyup', function () {
     let input = $('#tweet-text').val();
     $('.counter').val(count - input.length);
     //Change color if the number of input characters > 140
@@ -13,10 +13,10 @@ $(document).ready(function() {
   });
 
   //Handling the Hover using JQuery mouseover event
-  $('.tweet').on('mouseover', function() {
+  $('.tweet').on('mouseover', function () {
     $(this).find("span").val();
   });
-  $('.tweet').on('mouseout', function() {
+  $('.tweet').on('mouseout', function () {
     $(this).find("span").val("");
   });
 });
